@@ -5,9 +5,17 @@
     %title SebGlazebrook.com
     /  bootstrap
     %link{ :href => "/bootstrap/css/bootstrap.css", :type => "text/css", :rel => "stylesheet" }
+    %meta{:name => "viewport", :content=> "width=device-width, initial-scale=1.0"}
     %link{ :href => "/bootstrap/css/bootstrap-responsive.css", :type => "text/css", :rel => "stylesheet" }
     / stylesheet
     %link{ :href => "/stylesheets/application.css", :type => "text/css", :rel => "stylesheet" }
   %body
-    #wrapper
-      Hey hey!
+    .container
+      .header.row-fluid
+        = haml :header
+
+      .content.row-fluid
+        = haml :content
+
+      .footer.row-fluid
+        = haml :footer
