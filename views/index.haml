@@ -10,12 +10,14 @@
     / stylesheet
     %link{ :href => "/stylesheets/application.css", :type => "text/css", :rel => "stylesheet" }
   %body
-    .container
-      .header.row-fluid
-        = haml :header
+    #wrap
+      #main.container.clear-top
+        .header.row-fluid
+          = haml :header
 
-      .content.row-fluid
-        = haml :content
+        .content.row-fluid
+          = haml :content
 
-      .footer.row-fluid
+    %footer.container
+      .row-fluid
         = haml :footer
