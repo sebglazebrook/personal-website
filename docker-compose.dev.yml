@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  appserver:
+    build: .
+    ports:
+      - 9292
+    networks:
+      sebglazebrook:
+        aliases:
+          - "main-website"
+
+networks:
+  sebglazebrook:
+    external:
+      name: "sebglazebrook"
