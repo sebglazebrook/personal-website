@@ -6,3 +6,7 @@ dev-compile:
   command: yarn run webpack
 prod-compile:
   command: yarn run webpack -p
+ci-build:
+  command: docker build -t sebglazebrook/personal-website:latest .
+ci-publish:
+  command: docker push sebglazebrook/personal-website:latest
