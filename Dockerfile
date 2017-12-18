@@ -1,15 +1,20 @@
-FROM ruby:2.2.5
+FROM kkarczmarczyk/node-yarn
 
-RUN mkdir /app
+RUN apt-get update && apt-get install --yes nginx
 
-WORKDIR /app
+WORKDIR /code
 
-EXPOSE 9292
+COPY package.json .
 
-ADD Gemfile* /app/
+COPY yarn.lock .
 
-RUN bundle install
+RUN yarn install
 
-ADD . /app/
+COPY . /code/
 
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "9292"]
+RUN yarn run webpack -p
+
+COPY config/etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default
+COPY config/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+
+CMD nginx
