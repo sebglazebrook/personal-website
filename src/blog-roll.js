@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// TODO move data somewhere else
 let blogPostsData = [
   { header: "header here", content: "content here" },
   { header: "header here", content: "content here" },
@@ -8,6 +9,7 @@ let blogPostsData = [
 
 class BlogPostSnippet extends Component {
 
+  // TODO get link to work
   render() {
     return (
       <div>
