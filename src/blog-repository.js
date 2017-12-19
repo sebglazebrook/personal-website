@@ -1,4 +1,4 @@
-let blogData = [
+const blogData = [
   { header: "header first", content: "content here", url: "/posts/first" },
   { header: "header second", content: "content here", url: "/posts/second" },
   { header: "header third", content: "content here", url: "/posts/third" },
