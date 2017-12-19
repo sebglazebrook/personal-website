@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-
-// TODO move data somewhere else
-let blogPostsData = [
-  { header: "header here", content: "content here" },
-  { header: "header here", content: "content here" },
-  { header: "header here", content: "content here" },
-]
+import { Link } from 'react-router-dom';
+import BlogRepository from './blog-repository';
 
 class BlogPostSnippet extends Component {
 
-  // TODO get link to work
   render() {
     return (
       <div>
         <div>{this.props.blogPostData.header}</div>
         <div>{this.props.blogPostData.content}</div>
-        <a href="#foo">Read more</a>
+        <Link to={this.props.blogPostData.url}>Read more</Link>
       </div>
     );
   }
@@ -28,7 +22,7 @@ class BlogRoll extends Component {
     return (
       <div>
         {
-          blogPostsData.map((blogPostData, index) => {
+          BlogRepository.all().map((blogPostData, index) => {
             return (
               <div key={index}>
                 <BlogPostSnippet blogPostData={blogPostData} />
