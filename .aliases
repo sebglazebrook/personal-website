@@ -4,6 +4,8 @@
 
 dev-compile:
   command: yarn run webpack
+dev-up:
+  command: yarn run serve
 prod-compile:
   command: yarn run webpack -p
 ci-build:
