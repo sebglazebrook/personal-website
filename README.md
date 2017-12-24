@@ -48,12 +48,4 @@ ci-publish        # publish the docker image
 
 Deployment is manual for the moment.
 
-ssh into the prod box and run:
-
-```
-docker pull sebglazebrook/personal-website:latest
-
-docker stop <RUNNING_CONTAINER>
-
-docker run -d -p 80:80 sebglazebrook/personal-website:latest
-```
+Using the `.aliases` run `prod-deploy`
