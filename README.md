@@ -31,3 +31,29 @@ The trade off here is that (at this stage) the React framework makes up a large 
 ## Development
 
 There is a `.aliases` file in the project root directory. This will guide you on how to get the majority of tasks done.
+
+## CI
+
+Currently there is no CI server.
+
+You can manually run the CI steps using the `.aliases` shortcuts.
+
+```
+ci-build          # build the docker image
+
+ci-publish        # publish the docker image
+```
+
+## Deployment
+
+Deployment is manual for the moment.
+
+ssh into the prod box and run:
+
+```
+docker pull sebglazebrook/personal-website:latest
+
+docker stop <RUNNING_CONTAINER>
+
+docker run -d -p 80:80 sebglazebrook/personal-website:latest
+```
