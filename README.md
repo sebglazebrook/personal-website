@@ -32,6 +32,18 @@ The trade off here is that (at this stage) the React framework makes up a large 
 
 There is a `.aliases` file in the project root directory. This will guide you on how to get the majority of tasks done.
 
+### Adding a new blog post
+
+As there is no 'wysiwyg' editor or any dynamic way to add data, you have to add a static file and update any relevant meta files.
+
+To streamline this process run the following:
+
+```
+echo "$MY_JSON_DATA" | add-new-blog-post
+```
+
+This will add the right files and prompt you for any secondary information that's needed.
+
 ## CI
 
 Currently there is no CI server.
