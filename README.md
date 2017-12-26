@@ -32,6 +32,10 @@ The trade off here is that (at this stage) the React framework makes up a large 
 
 There is a `.aliases` file in the project root directory. This will guide you on how to get the majority of tasks done.
 
+### Dependencies
+
+It's expected that you have `docker` and `docker-compose` installed when developing on this app.
+
 ### Adding a new blog post
 
 As there is no 'wysiwyg' editor or any dynamic way to add data, you have to add a static file and update any relevant meta files.
