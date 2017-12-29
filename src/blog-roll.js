@@ -8,7 +8,7 @@ class BlogPostSnippet extends Component {
     return (
       <div>
         <div>{this.props.blogPostData.header}</div>
-        <div>{this.props.blogPostData.content.substr(0, 4)}</div>
+        <div>{this.props.blogPostData.content_snippet}</div>
         <Link to={this.props.blogPostData.url}>Read more</Link>
       </div>
     );

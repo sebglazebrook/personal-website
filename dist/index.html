@@ -6,6 +6,13 @@
   </head>
   <body>
     <div id="main-container"></div>
+    <!-- TODO make this insertion dynamic -->
+    <!-- Insert Data for initial load below here -->
+     <script>
+        var rawData = '{ "posts": [ { "header": "hello world", "content_snippet": "hello from my world!", "url": "/posts/1514546432-hello_world", "data_url": "data/posts/1514546432-hello_world.json" } ] }';
+        window.blogData = JSON.parse(rawData)["posts"];
+     </script>
+    <!-- Insert Data for initial load above here -->
      <script src="app.bundle.js"></script>
   </body>
 </html>
