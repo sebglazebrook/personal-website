@@ -4,7 +4,7 @@
 
 ---
 "add-new-blog-post":
-  command: ./script/add-new-blog-post
+  command: docker run -i -v ${PWD}:/code -w /code --rm ruby:alpine ./script/add-new-blog-post
 "ci-build":
   command: "docker build -t sebglazebrook/personal-website:latest ."
 "ci-publish":
