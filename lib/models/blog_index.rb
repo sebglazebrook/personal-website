@@ -1,10 +1,10 @@
 module Models
-  class BlogRoll  # TODO rename to BlogIndex
+  class BlogIndex
 
     attr_writer :blog_posts
 
     def save
-      Repositories::BlogRollRepository.save(self)
+      Repositories::BlogIndexRepository.save(self)
     end
 
     def as_json

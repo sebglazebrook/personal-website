@@ -1,5 +1,5 @@
 require "factories/blog_post_factory"
-require "repositories/blog_roll_repository"
+require "repositories/blog_index_repository"
 
 module Commands
   class AddNewBlogPost
@@ -10,7 +10,7 @@ module Commands
 
     def call
       create_blog_post
-      update_blog_roll
+      update_blog_index
       update_index_html
     end
 
@@ -20,8 +20,8 @@ module Commands
       Factories::BlogPostFactory.create(@blog_post_data)
     end
 
-    def update_blog_roll
-      Repositories::BlogRollRepository.rebuild
+    def update_blog_index
+      Repositories::BlogIndexRepository.rebuild
     end
 
     def update_index_html

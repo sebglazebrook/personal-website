@@ -16,7 +16,7 @@ class BlogPostSnippet extends Component {
 
 }
 
-class BlogRoll extends Component {
+class BlogIndex extends Component {
 
   blogPostSnippets() {
     return (
@@ -44,4 +44,4 @@ class BlogRoll extends Component {
 
 }
 
-export default BlogRoll;
+export default BlogIndex;

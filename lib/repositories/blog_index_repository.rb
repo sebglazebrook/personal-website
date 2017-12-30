@@ -1,18 +1,18 @@
-require "models/blog_roll"
+require "models/blog_index"
 require "repositories/blog_post_repository"
 
 module Repositories
-  class BlogRollRepository
+  class BlogIndexRepository
 
     def self.rebuild
-      blog_roll = Models::BlogRoll.new
+      blog_index = Models::BlogIndex.new
       blog_posts = Repositories::BlogPostRepository.all
-      blog_roll.blog_posts = blog_posts
-      blog_roll.save
+      blog_index.blog_posts = blog_posts
+      blog_index.save
     end
 
-    def self.save(blog_roll)
-      data_dir.join("index.js").write(blog_roll.to_json)
+    def self.save(blog_index)
+      data_dir.join("index.js").write(blog_index.to_json)
     end
 
     def self.data_dir
