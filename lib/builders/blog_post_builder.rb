@@ -13,7 +13,7 @@ module Builders
 
     def build!
       blog_post = Models::BlogPost.new(header: header, content: content, created_at: created_at)
-      blog_post.valid? ? blog_post : raise(UnableToBuildBlogPost.new) # TODO add exception details
+      blog_post.valid? ? blog_post : raise(UnableToBuildBlogPost.new)
     end
 
     class UnableToBuildBlogPost < StandardError; end

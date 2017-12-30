@@ -7,7 +7,7 @@ module Repositories
     def self.rebuild
       blog_roll = Models::BlogRoll.new
       blog_posts = Repositories::BlogPostRepository.all
-      blog_roll.blog_posts = blog_posts # TODO tell don't ask?
+      blog_roll.blog_posts = blog_posts
       blog_roll.save
     end
 

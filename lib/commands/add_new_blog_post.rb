@@ -24,10 +24,9 @@ module Commands
       Repositories::BlogRollRepository.rebuild
     end
 
-    # TODO refactor this
     def update_index_html
-      index_contents = PROJECT_DIR.join("dist", "index.html").read # get the contents of the index file
-      blog_data_contents = PROJECT_DIR.join("dist", "data", "posts", "index.js").read # get the contents of the blog roll data
+      index_contents = PROJECT_DIR.join("dist", "index.html").read
+      blog_data_contents = PROJECT_DIR.join("dist", "data", "posts", "index.js").read
       load_data =
 """
 <!-- Insert Data for initial load below here -->
