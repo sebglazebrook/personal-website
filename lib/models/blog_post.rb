@@ -16,7 +16,7 @@ module Models
     end
 
     def invalid?
-      instance_variables.any? { |variable| variable.nil? }
+      content.nil? || header.nil? || created_at.nil?
     end
 
     # TODO need a better name for name

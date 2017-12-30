@@ -8,9 +8,7 @@ module Repositories
 
       def all
         data_dir.entries.map do |entry|
-          if entry.to_s =~ /^\d{10}-/ # TODO remove the if?
-            Factories::BlogPostFactory.create_from_file(data_dir.join(entry))
-          end
+          Factories::BlogPostFactory.create_from_file(data_dir.join(entry)) rescue nil
         end.compact
       end
 

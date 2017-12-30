@@ -4,8 +4,6 @@ require "time"
 module Builders
   class BlogPostBuilder
 
-    class UnableToBuildBlogPost < StandardError; end
-
     attr_accessor :header, :content
     attr_writer :created_at
 
@@ -18,5 +16,6 @@ module Builders
       blog_post.valid? ? blog_post : raise(UnableToBuildBlogPost.new) # TODO add exception details
     end
 
+    class UnableToBuildBlogPost < StandardError; end
   end
 end
