@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BlogIndex from './blog-roll';
+import BlogIndex from './blog-index';
 
 class Homepage extends Component {
 
