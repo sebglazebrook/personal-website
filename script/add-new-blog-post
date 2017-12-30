@@ -2,6 +2,6 @@
 require_relative "../lib/application"
 require "commands/add_new_blog_post"
 
-log "Reading from stdin"
+LOGGER.info "Reading from stdin"
 blog_post_data = STDIN.read
 Commands::AddNewBlogPost.new(blog_post_data).call
