@@ -19,13 +19,7 @@ module Models
       content.nil? || header.nil? || created_at.nil?
     end
 
-    # TODO need a better name for name
-    def name
-      "#{created_at.to_i}-#{header.gsub(/\s+/, '_')}" # TODO this is a hack
-    end
-
-    # TODO need a better name for file_name
-    def file_name
+    def data_filename
       "#{name}.json"
     end
 
@@ -40,11 +34,15 @@ module Models
         content_snippet: content_snippet,
         created_at: created_at,
         url:  "/posts/#{name}",
-        data_url:  "data/posts/#{file_name}"
+        data_url:  "data/posts/#{data_filename}"
       }
     end
 
     private
+
+    def name
+      "#{created_at.to_i}-#{header.gsub(/\s+/, '_')}" # TODO this is a hack
+    end
 
     attr_reader :header, :content, :created_at
   end

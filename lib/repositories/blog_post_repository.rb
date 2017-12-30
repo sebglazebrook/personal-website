@@ -13,7 +13,7 @@ module Repositories
       end
 
       def save(blog_post)
-        data_dir.join(blog_post.file_name).write(JSON.pretty_generate(blog_post.as_json))
+        data_dir.join(blog_post.data_filename).write(JSON.pretty_generate(blog_post.as_json))
       end
 
       private
