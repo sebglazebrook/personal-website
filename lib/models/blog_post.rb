@@ -41,7 +41,7 @@ module Models
     private
 
     def name
-      "#{created_at.to_i}-#{header.gsub(/\s+/, '_')}" # TODO this is a hack
+      "#{created_at.to_i}-#{header.gsub(/\s+/, '_')}"
     end
 
     attr_reader :header, :content, :created_at
