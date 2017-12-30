@@ -11,7 +11,7 @@ class BlogPost extends Component {
   componentDidMount() {
     const that = this;
     Request
-      .get(this.props.data_url) // TODO casing
+      .get(this.props.data_url)
       .then(function(response) {
         if (response.ok) {
           that.setState({loading: false, errorLoadingData: false, data: JSON.parse(response.text)});

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BlogRoll from './blog-roll';
+import BlogIndex from './blog-roll';
 
 class Homepage extends Component {
 
@@ -7,7 +7,7 @@ class Homepage extends Component {
     return (
       <div>
         <h1>SebGlazebrook.com</h1>
-        <BlogRoll />
+        <BlogIndex />
       </div>
     );
   }
