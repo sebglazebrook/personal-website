@@ -28,7 +28,7 @@ module Factories
       def build_blog_post(json_data)
         builder = Builders::BlogPostBuilder.new
         builder.header = json_data["header"]
-        builder.content = json_data["content"]
+        builder.content = json_data["content"].to_json
         builder.created_at = json_data["created_at"]
         builder.build!
       end

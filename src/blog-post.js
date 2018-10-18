@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Request from 'superagent';
+import ReactMarkdown from "react-markdown";
 
 class BlogPost extends Component {
 
@@ -31,7 +32,7 @@ class BlogPost extends Component {
     return (
       <div>
         <div>{this.state.data.header}</div>
-        <div>{this.state.data.content}</div>
+        <ReactMarkdown source={this.state.data.content} />
       </div>
     );
   }

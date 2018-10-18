@@ -24,7 +24,7 @@ module Models
     end
 
     def content_snippet
-      content[0..100]
+      content
     end
 
     def as_json
